@@ -34,7 +34,7 @@
       </style>
    </head>
    <body>
-      <audio src="birthdaySong.mp3" loop id="song"></audio> 
+      <audio src="birthdaySong.mp3" loop id="song" controls></audio> 
       
       <div>
          Made with <span style="color: red">&hearts;</span> by Azmath
@@ -82,9 +82,11 @@
             document.getElementById("name").innerHTML = name;
            
          }
-         function play() {
-            document.getElementById("song").play(); 
+         function play() {            
+            document.getElementById("song").play();            
          }
+         
+         
          
       </script>
    </body>
