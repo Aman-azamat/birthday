@@ -78,13 +78,22 @@
          if(name != "null" && name != undefined && name != "" && name != null) {
             document.getElementById("name").innerHTML = name;           
          }
+         else{
+          document.getElementById("name").innerHTML = ""; 
+         }
          
          if(author != "null" && author != undefined && author != "" && name != null) {
             document.getElementById("author").innerHTML = author;           
          }
+         else{
+         document.getElementById("author").innerHTML = "Azmath";  
+         }
          
           if(wishtype != "null" && wishtype != undefined && wishtype != "" && wishtype != null) {
             document.getElementById("wishtype").innerHTML = wishtype;           
+         }
+         else{
+             document.getElementById("wishtype").innerHTML = "Happy Birthday"; 
          }
          
          
