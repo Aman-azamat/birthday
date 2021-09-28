@@ -37,22 +37,13 @@
       <audio src="birthdaySong.mp3" loop id="song"></audio> 
       
       <div>
-         Made with <span style="color: red">&hearts;</span> by Azmath
+         Made with <span style="color: red">&hearts;</span> by <span id="author"></span>
       </div>
       <div class="main_header">
          <div class="center_div">
-            Happy Birthday
+            <span id="wishtype"></span>
          </div>      
-         <!-- <div>
-            <span id="nameDiv" hidden>🎂<span id="name">Prabhu</span>🎂</span>
-            <table style="width: 100%;">
-               <tr>
-                  <td>🎂</td>
-                  <td><span id="name"></span></td>
-                  <td>🎂</td>
-               </tr>
-            </table>
-         </div> -->
+      
          <div style="display: flex; flex-direction: row; align-content: center;">
             <div style="flex:2; width:10%;">🎂</div>
             <div style="flex:2; flex-wrap: wrap"><span id="name"></span></div>
@@ -77,11 +68,26 @@
          var url_string = window.location.href;
          var url = new URL(url_string);
          var name = url.searchParams.get("name");
+         var author = url.searchParams.get("author");
+         var wishtype = url.searchParams.get("wishtype");
+         
+           console.log('name:'+name);
+           console.log('author:'+author);
+           console.log('wishtype:'+wishtype);
          
          if(name != "null" && name != undefined && name != "" && name != null) {
-            document.getElementById("name").innerHTML = name;
-           
+            document.getElementById("name").innerHTML = name;           
          }
+         
+         if(author != "null" && author != undefined && author != "" && name != null) {
+            document.getElementById("author").innerHTML = author;           
+         }
+         
+          if(wishtype != "null" && wishtype != undefined && wishtype != "" && wishtype != null) {
+            document.getElementById("wishtype").innerHTML = wishtype;           
+         }
+         
+         
          function play() {            
             document.getElementById("song").play();            
          }
